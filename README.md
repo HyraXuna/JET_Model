@@ -1,4 +1,4 @@
-# JET Model
+# JET Model (Jedha Evaluation Tyres)
 
 ![Jet_model_logo](Logo/Logo_JET.png)
 
