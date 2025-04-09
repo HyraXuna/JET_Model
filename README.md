@@ -37,6 +37,8 @@ https://huggingface.co/HyraXuna/Jet_model_MobileNetV2/tree/main
 
 * In the folder Dashboard, You will find all the files for the cration of the application.
 
+* Some test for image processing, with the idea to generalize prediction on bigger images of full wheel that can be recognize and after that cut in multiples sub-images with only the tyre to make predictions on all the different parts of the tyre.
+
 ### Prerequisites
 
 Things you need to run the codes:
@@ -60,6 +62,17 @@ streamlit
 
 Link for the App : https://huggingface.co/spaces/jedhajet/jedhaJetTer
 
+the different pages of the App:
+
+* The prediction with image loading
+
+* The overview of the project
+
+* The dataset presentation with some other information
+
+* The models presentation and performances, Baseline & Final one
+
+  
 ## Authors
 
 **Youenn Patat** - [Github Account](https://github.com/HyraXuna)
@@ -70,6 +83,8 @@ Link for the App : https://huggingface.co/spaces/jedhajet/jedhaJetTer
 
 ## Acknowledgments
 
+* Thanks To Floriane Dussart for her help and the team working.
+* 
 * Thanks for Jedha and its instructors for the lectures, exercises and all the work.
 
 
