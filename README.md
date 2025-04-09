@@ -46,15 +46,19 @@ Things you need to run the codes:
 ```
 python 3.10.11
 
-pandas
-numpy
+streamlit==1.32.0
+plotly==5.22.0
+Pillow
+pandas==2.2.2
+numpy==1.26.4
+datasets
+scikit-image
+seaborn
 matplotlib
-plotly
-tensorflow
-cv2
+tensorflow==2.19.0
 ultralytics
-PIL
-streamlit
+opencv-python-headless
+huggingface_hub
 
 ```
 
