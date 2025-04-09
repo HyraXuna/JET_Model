@@ -79,7 +79,7 @@ the different pages of the App:
 
 &
 
-**Floriane Dussart** - 
+**Floriane Dussart** - [Github Account](https://github.com/flo2706)
 
 ## Acknowledgments
 
