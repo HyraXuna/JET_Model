@@ -35,7 +35,7 @@ https://huggingface.co/HyraXuna/JET_model_inceptionV3_base/tree/main
 
 https://huggingface.co/HyraXuna/Jet_model_MobileNetV2/tree/main
 
-* In the folder Dashboard, You will find all the files for the cration of the application.
+* In the folder Dashboard, You will find all the files for the creation of the application.
 
 * Some test for image processing, with the idea to generalize prediction on bigger images of full wheel that can be recognize and after that cut in multiples sub-images with only the tyre to make predictions on all the different parts of the tyre.
 
@@ -84,7 +84,7 @@ the different pages of the App:
 ## Acknowledgments
 
 * Thanks To Floriane Dussart for her help and the team working.
-* 
+
 * Thanks for Jedha and its instructors for the lectures, exercises and all the work.
 
 
