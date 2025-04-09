@@ -1,6 +1,7 @@
 # JET Model
 
 ![Jet_model_logo](Logo/Logo_JET.png)
+
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 
@@ -30,7 +31,7 @@ streamlit
 
 ## Authors
 
-**Youenn Patat** - [Github Account]([https://github.com/PurpleBooth](https://github.com/HyraXuna))
+**Youenn Patat** - [Github Account](https://github.com/HyraXuna)
 
 &
 
