@@ -162,9 +162,9 @@ st.markdown("""
 st.markdown("""
             Ce modèle est stocké à cette adresse : https://huggingface.co/HyraXuna/Jet_model_MobileNetV2/tree/main
 
-            Si vous désirez le télécharger le modèle entier, à la fin des epoch, veuillez cliquez ici : [télécharger le modèle à la dernière epoch 🦊](https://huggingface.co/HyraXuna/Jet_model_MobileNetV2/resolve/main/mobilenetv2model_finetune.h5)
+            Si vous désirez télécharger le modèle entier, à la fin des epoch, veuillez cliquez ici : [télécharger le modèle à la dernière epoch 🦊](https://huggingface.co/HyraXuna/Jet_model_MobileNetV2/resolve/main/mobilenetv2model_finetune.h5)
 
-            i vous désirez le télécharger le modèle au meilleur checkpoint, à l'epoch 23, veuillez cliquez ici : [télécharger le modèle à la meilleure epoch 🐯](https://huggingface.co/HyraXuna/Jet_model_MobileNetV2/resolve/main/model_epoch_23_val_acc_0.86.h5)
+            Si vous désirez télécharger le modèle au meilleur checkpoint, à l'epoch 23, veuillez cliquez ici : [télécharger le modèle à la meilleure epoch 🐯](https://huggingface.co/HyraXuna/Jet_model_MobileNetV2/resolve/main/model_epoch_23_val_acc_0.86.h5)
 """)
 
 st.subheader("Schéma du modèle 🪪")
@@ -224,8 +224,8 @@ st.markdown("""
             Le modèle a été entrainé avec l'optimizer `Adam` avec un learning rate de $1^{-5}$, 
             ainsi qu'un calcul de fonction de coût et des métriques pour une classification binaire 
             (`BinaryCrossentropy` & `BinaryAccuracy`). Il y avait aussi un `early stopping` basé sur la fonction de coût de la validation
-            qui arrêtait l'entrainement du modèle s'il n"y avait pas de progression sur 5 epoch.
-            Pour le `Fine tuning` nous avons libérer les 10 dernières couches du MibileNetV2.
+            qui arrêtait l'entrainement du modèle s'il n'y avait pas de progression sur 5 epoch.
+            Pour le `Fine tuning` nous avons libéré les 10 dernières couches du MibileNetV2.
 """)
 
 
@@ -272,4 +272,54 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     st.image("pages/confusion_matrix/matrix_confusion_mobilinetv2_finetune.png", use_container_width=True)
     st.write("On voit bien une amélioration dans la prédiction par rapport à la baseline ! ✅")
+
+st.title("Modèle de détection : YOLOv8")
+
+st.markdown("""
+Le modèle YOLOv8 est un modèle de détection d'objets développé par Ultralytics, qui nous a permis d’identifier automatiquement les pneus présents dans une image et de les encadrer à l’aide de bounding boxes. Il a été entraîné à l’aide d’un dataset préparé avec Roboflow, contenant des images et leurs annotations au format YOLOv8 (.txt), afin de permettre la localisation des zones à analyser.
+""")
+
+st.subheader("Détails techniques")
+
+st.markdown("""
+| Paramètres            | Valeurs                                                |
+|----------------------|--------------------------------------------------------|
+| **Modèle**           | YOLOv8 (Medium)                                        |
+| **Taille des images**| 800 × 800                                              |
+| **Nbre d'EPOCH**     | 50                                                     |
+|**Poids utilisés**    | [best.pt](https://huggingface.co/flodussart/jet_yolov8m/resolve/main/best.pt)          |
+| **Fichier config**   | [data.yaml](https://huggingface.co/datasets/flodussart/tires_project_roboflow/blob/main/data.yaml) |
+| **Nombre de classes**| 1 (pneu uniquement)                                    |
+""", unsafe_allow_html=True)
+
+st.subheader("Performances du modèle 📈")
+
+st.markdown("""
+Les métriques sont calculées à la fois sur l’ensemble de **validation** et de **test** :
+
+|                  | Validation | Test      |
+|------------------|------------|-----------|
+| 🎯 **Précision**     | 93.32 %    | 96.85 %   |
+| 📌 **Recall**        | 93.66 %    | 91.56 %   |
+| 📦 **mAP@50**        | 97.37 %    | 97.30 %   |
+| 🔍 **mAP@50-95**     | 61.99 %    | 61.65 %   |
+""", unsafe_allow_html=True)
+
+st.markdown("""
+👉 La précision du modèle est excellente, notamment en mAP@50, ce qui montre une bonne **capacité de détection des pneus** dans diverses situations.
+""")
+
+st.markdown("---")
+st.subheader("Étapes post-détection avec OpenCV (cv2)")
+
+st.markdown("""
+Après la détection des pneus avec le modèle YOLOv8, nous utilisons la bibliothèque **OpenCV (`cv2`)** pour effectuer plusieurs traitements essentiels :
+
+- 📐 **Redimensionnement des zones détectées** pour les adapter à l'entrée du modèle de classification.
+- 🎨 **Conversion des couleurs** pour passer du format BGR (utilisé par OpenCV) au format RGB (utilisé par Keras et PIL).
+- 🧩 **Découpage en grille (4×4)** de chaque pneu pour une analyse locale par zones.
+
+Cela permet une **analyse visuelle précise et localisée**, utile pour détecter des zones anormales même sur un pneu globalement en bon état.
+""")
+
 
