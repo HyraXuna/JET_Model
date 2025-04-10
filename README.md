@@ -68,13 +68,13 @@ Link for the App : https://huggingface.co/spaces/jedhajet/jedhaJetTer
 
 the different pages of the App:
 
-* The prediction with image loading
+* The prediction with image loading. A global prediction for the entire wheel and the different prediction for each boxes cut in the principal image
 
 * The overview of the project
 
-* The dataset presentation with some other information
+* The dataset presentation with some other informations
 
-* The models presentation and performances, Baseline & Final one
+* The model presentation and performances, Baseline & Final one
 
   
 ## Authors
