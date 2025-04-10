@@ -76,6 +76,8 @@ the different pages of the App:
 
 * The model presentation and performances, Baseline & Final one
 
+![screen_app](Test_screen_app_pred.png)
+
   
 ## Authors
 
