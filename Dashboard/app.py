@@ -6,15 +6,7 @@ page_icon_path="logo/logo_app_favicon.png"
 st.set_page_config(page_title="JET", page_icon=page_icon_path, layout="wide")
 
 with st.sidebar:
-    # Logo réduit et centré
-    st.markdown(
-        """
-        <div style="text-align: center;">
-            <img src="https://huggingface.co/datasets/flodussart/project_jet/resolve/c61175334d29a0a75e2f38e346353f5e55d5ed47/pneu.png" width="120"/>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.image("logo/Logo_JET.png", use_container_width=True)
 
     # Titre centré
     st.markdown(
