@@ -4,6 +4,7 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
+The video of presentation of the project : https://drive.google.com/file/d/1ejJc8_f-OINJSaEBXMrbe0BK1E_dHZnL/view?usp=sharing
 
 This project aims to help users to maintain tyres of their vehicles, It is based on deep learning using image classification:
 
